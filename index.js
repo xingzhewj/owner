@@ -1,1 +1,1 @@
-console.log('hello word!');
+import app from './src';
