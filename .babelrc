@@ -17,11 +17,9 @@
         "react"
     ],
     "plugins": [
-        ["import", {
-            "libraryName": "antd",
-            "libraryDirectory": "lib",
-            "style": true
-        }]
+        "transform-runtime", ["import", {"libraryName": "antd", "style": true}],
+        "syntax-dynamic-import",
+        "transform-object-rest-spread"
     ],
     "env": {
         "production": {

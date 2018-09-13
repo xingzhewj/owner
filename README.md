@@ -1,2 +1,2 @@
-# owner
-社区管理
+# react-simple
+react单页面架构

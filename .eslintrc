@@ -1,11 +1,12 @@
 {
     "env": {
         "browser": true,
-        "commonjs": true,
-        "es6": true
+        "es6": true,
+        "node": true
     },
     "extends": [
-        "eslint:recommended"
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -19,13 +20,16 @@
         "sourceType": "module"
     },
     "parser": "babel-eslint",
-    "plugins": [],
+    "plugins": [
+        "react"
+    ],
     "rules": {
         "linebreak-style": [
             "error",
             "unix"
         ],
         "no-empty": 0,
+        "comma-dangle": 0,
         "no-unused-vars": 1,
         "no-console": 0,
         "no-const-assign": 2,
@@ -47,20 +51,6 @@
         "no-array-constructor": 2,
         "no-class-assign": 2,
         "no-cond-assign": 2,
-        "no-mixed-spaces-and-tabs": 0,
-        "no-path-concat": 0,
-        "no-undef": 0,
-        "comma-dangle": [2, "never"],
-        "semi": [2, "always"],
-        "indent": [ "error", 4 ],
-        "camelcase": 2,
-        "array-bracket-spacing": [2, "never"],
-        "object-curly-spacing": [2, "never"],
-        "block-spacing": [2, "never"],
-        "quotes": [2, "single"],
-        "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
-        "no-trailing-spaces": 1,
-        "arrow-spacing": 2,
-        "spaced-comment": 2
+        "no-mixed-spaces-and-tabs": 0
     }
 }
