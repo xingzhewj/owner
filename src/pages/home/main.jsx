@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import './css/home';
 
 class Home extends Component {
@@ -8,9 +9,19 @@ class Home extends Component {
 
     render() {
         return (
-            <h2>home页</h2>
+            <div>
+                <h2>home页</h2>
+            </div>
         );
     }
 }
 
-export default Home;
+const mapStateToProps = (state) => ({
+    stateMap: state.reducer
+});
+
+const mapDispatchToProps = (dispatch) => ({
+
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

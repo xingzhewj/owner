@@ -18,7 +18,7 @@ class Login extends Component {
     }
 
     render() {
-        const {isLogin, userName} = this.props.stateMap.login;
+        const {userName} = this.props.stateMap.login;
         return (
             <div>
                 <h2 className="login-title">{userName || '未知'}</h2>

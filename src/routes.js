@@ -3,18 +3,27 @@
  * @Author wangjie19
  * @Date 2018-06-21 17:39:45
  * @Last Modified by: wangjie19
- * @Last Modified time: 2018-06-22 16:07:47
+ * @Last Modified time: 2018-09-14 16:54:58
  */
 
+import Layout from './layouts/Layout';
 import Login from './pages/login/main';
-
-const Home = require.ensure([], require => require('./pages/home/main'), 'home');
-// const Login = require.ensure([], require => require('./pages/login/main'), 'login');
+import Home from './pages/home/main';
 
 const routes = [
     {
-        path: '/home',
-        getComponents: Home,
+        path: '/',
+        component: Layout,
+        indexRoute: {
+            component: Home
+        },
+        childRoutes: [
+            {
+                path: '/home',
+                component: Home,
+                exact: true
+            }
+        ],
         exact: true
     },
     {
